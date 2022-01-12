@@ -1,5 +1,8 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "cli": {
+    "analytics": "d3602960-52d5-44f4-ba1a-52fc8830c615"
+  },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
@@ -69,6 +72,9 @@
           "defaultConfiguration": "production"
         },
         "serve": {
+          "options": {
+            "port": 1111
+          },
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
@@ -99,7 +105,8 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css"
             ],
             "scripts": []
           }
